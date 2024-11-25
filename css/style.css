@@ -700,3 +700,24 @@ opacity: 1;
 blog part end
 */
 
+/*
+footer part start
+*/
+.footer{
+    background: #1C1E53;
+    padding-top: 100px;
+    padding-bottom: 96px;
+}
+
+.footer p{
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Poppins", serif;
+    color: white;
+    width: 400px;
+    padding-top: 22px;
+}
+/*
+footer part end
+*/
+
