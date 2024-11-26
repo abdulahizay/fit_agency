@@ -794,7 +794,7 @@ footer part start
     font-size: 16px;
     font-weight: 500;
     color: #282938;
-    transition: .4s;
+    transition: .5s;
 }
 .copy .box p:hover{
     color: red;
