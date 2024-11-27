@@ -773,40 +773,73 @@ footer part start
 }
 
 
-.copy ul{
+.copy ul {
     display: flex;
     column-gap: 32px;
 }
-.copy .box{
-    display: flex ;
+
+.copy .box {
+    display: flex;
     justify-content: space-between;
     padding: 32px 0px;
 }
 
-.copy ul li{
+.copy ul li {
     font-family: "Poppins", serif;
     font-size: 16px;
     font-weight: 500;
     color: #282938;
+    position: relative; /* Added for ::after positioning */
+    transition: color 0.5s;
 }
-.copy .box p{
+
+.copy ul li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Adjust for spacing below text */
+    width: 0;
+    height: 2px;
+    background-color: #00bcd4; /* Border color */
+    transition: width 0.3s ease;
+}
+
+.copy ul li:hover {
+    color: #00bcd4; /* Text color on hover */
+}
+
+.copy ul li:hover::after {
+    width: 100%; /* Full-width border on hover */
+}
+
+.copy .box p {
     font-family: "Poppins", serif;
     font-size: 16px;
     font-weight: 500;
     color: #282938;
-    transition: .5s;
+    position: relative; /* Added for ::after positioning */
+    transition: color 0.5s;
 }
-.copy .box p:hover{
+
+.copy .box p::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Adjust for spacing below text */
+    width: 0;
+    height: 2px;
+    background-color: red; /* Border color */
+    transition: width 0.3s ease;
+}
+
+.copy .box p:hover {
     color: red;
 }
-.copy ul li:hover{
-  border: 1px solid black;
-  padding: 5px;
-  border-radius: 10px;
-  color: black;
-  background-color: #FCD980;
-  
+
+.copy .box p:hover::after {
+    width: 100%; /* Full-width border on hover */
 }
+
 
 /*
 footer part end
